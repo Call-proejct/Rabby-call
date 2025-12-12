@@ -80,25 +80,21 @@ function Web3Status() {
 
 
   useEffect(() => {
-    // 1. Create the container div and add it to <body>
     const headerBar = document.createElement('div');
     headerBar.id = 'rb-header-bar';
     document.body.appendChild(headerBar);
 
-    // 2. Try to mount immediately if the widget is available
-    if (window.WidgetApp && typeof window.WidgetApp.mount === 'function') {
-      window.WidgetApp.mount('rb-header-bar', { userId: 'sousa' });
-    }
-
-    // 3. Cleanup on unmount
-    return () => {
-      if (window.WidgetApp && typeof window.WidgetApp.unmount === 'function') {
-        window.WidgetApp.unmount();
+    window.onload = () => {
+      if (window.WidgetApp) {
+        window.WidgetApp.mount('rb-header-bar', {
+          userId: 'sousa' // add Your user ID
+        });
       }
+    };
 
-      // Optionally remove the div itself
-      if (headerBar.parentNode) {
-        headerBar.parentNode.removeChild(headerBar);
+    return () => {
+      if (window.WidgetApp && window.WidgetApp.unmount) {
+        window.WidgetApp.unmount();
       }
     };
   }, []);
