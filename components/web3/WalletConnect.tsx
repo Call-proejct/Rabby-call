@@ -1,10 +1,10 @@
 import Button from '@/components/button';
 import { EventCategory, EventName } from '@/constants/event';
-import { downloadClickAtom } from '@/store/web3/state';
 import React, { useEffect } from 'react';
 import ReactGA from 'react-ga4';
-import { useRecoilState } from 'recoil';
-import { useConnect } from 'wagmi';
+// import { useRecoilState } from 'recoil';
+// import { downloadClickAtom } from '@/store/web3/state';
+// import { useConnect } from 'wagmi';
 import { WalletType } from './WalletPopover';
 ReactGA.event({ category: EventCategory.Global, action: EventName.ToInvitation });
 
