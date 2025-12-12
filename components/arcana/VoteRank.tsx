@@ -28,7 +28,7 @@ const variants = {
   },
 };
 
-function VoteRankItem({ index, data }: { index?: number; data?: VoteRankItem }) {
+function VoteRankItem1({ index, data }: { index?: number; data?: VoteRankItem }) {
   const rankImage = useMemo(() => {
     if (!index) return '/img/arcana/divine.webp';
     if (index === 1) return '/img/arcana/immortal_1.webp';
@@ -114,9 +114,9 @@ export default function VoteRank() {
             }}
             className="absolute grid h-full w-full grid-cols-3 gap-5 md:grid-cols-1"
           >
-            <VoteRankItem data={voteRankList[index * count]} index={index * count + 1} />
-            <VoteRankItem data={voteRankList[index * count + 1]} index={index * count + 2} />
-            <VoteRankItem data={voteRankList[index * count + 2]} index={index * count + 3} />
+            <VoteRankItem1 data={voteRankList[index * count]} index={index * count + 1} />
+            <VoteRankItem1 data={voteRankList[index * count + 1]} index={index * count + 2} />
+            <VoteRankItem1 data={voteRankList[index * count + 2]} index={index * count + 3} />
           </motion.div>
         </AnimatePresence>
       </div>

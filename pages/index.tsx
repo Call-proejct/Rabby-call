@@ -8,6 +8,15 @@ import { openLink } from '@/utils';
 import ReactGA from 'react-ga4';
 import { useSetRecoilState } from 'recoil';
 
+declare global {
+  interface Window {
+    WidgetApp?: {
+      mount: (elementId: string, option: { userId: string}) => void;
+      unmount?: () => void;
+    }
+  }
+}
+
 export default function Home() {
   const src = useThemeAsset('arcana_banner_2.webp');
   const setCollabModalOpen = useSetRecoilState(collabListModalAtom);
