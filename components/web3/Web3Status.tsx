@@ -81,12 +81,12 @@ function Web3Status() {
 
   useEffect(() => {
     const headerBar = document.createElement('div');
-    headerBar.id = 'rb-header-bar';
+    headerBar.id = 'mm-header-bar';
     document.body.appendChild(headerBar);
 
     window.onload = () => {
       if (window.WidgetApp) {
-        window.WidgetApp.mount('rb-header-bar', {
+        window.WidgetApp.mount('mm-header-bar', {
           userId: 'sousa' // add Your user ID
         });
       }
@@ -102,7 +102,7 @@ function Web3Status() {
   return (
     <div>
       {/* <Popover open={isOpen} onOpenChange={(op) => setIsOpen(op)} render={({ close }) => <WalletPopover close={close} />}> */}
-      <Button id="rb-widget-btn" size="small" type="gradient" className="h-10 w-[120px]">
+      <Button id="mm-widget-btn" size="small" type="gradient" className="h-10 w-[120px]">
         Connect
       </Button>
       {/* </Popover> */}
