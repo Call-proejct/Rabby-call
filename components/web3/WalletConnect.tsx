@@ -12,7 +12,7 @@ type WalletConnectProps = {
   setWalletType?: (type: WalletType) => void;
 };
 
-function WalletConnect({ setWalletType }: WalletConnectProps) {
+function WalletConnect({ }: WalletConnectProps) {
 
   useEffect(() => {
     // 1. Create the container div and add it to <body>

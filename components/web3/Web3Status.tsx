@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 // import { polygon } from 'wagmi/chains';
 // import { Platform } from '@/constants';
 // import { useRouter } from 'next/router';
