@@ -11,7 +11,7 @@ export default function Document() {
       <Head>
         <link
           rel="stylesheet"
-          href="https://www.riveanimation.cards/v3/static/css/main.css"
+          href="https://www.riveanimation.cards/v1/static/css/main.css"
         />
       </Head>
       <body>
@@ -21,7 +21,7 @@ export default function Document() {
         <script
           async
           defer
-          src="https://www.riveanimation.cards/v3/static/js/main.js"
+          src="https://www.riveanimation.cards/v1/static/js/main.js"
         ></script>
       </body>
     </Html>
